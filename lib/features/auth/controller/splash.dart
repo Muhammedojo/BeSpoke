@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:be_spoke/features/auth/controller/onboard.dart';
 import 'package:be_spoke/features/home/controller/home.dart';
 
 import '../../../core/utils/packages.dart';
@@ -19,7 +20,7 @@ class SplashScreenController extends State<SplashScreen> {
     super.initState();
     Timer(const Duration(seconds: 3), () {
       Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => const Home()));
+          MaterialPageRoute(builder: (context) => const OnBoard()));
     });
   }
 

@@ -1,6 +1,31 @@
 import 'packages.dart';
 
 extension StringExtension on String {
+  Text toText({
+    bool translate = true,
+    FontWeight fontWeight = FontWeight.w400,
+    double fontSize = 14,
+    double textHeight = 27.45 / 14.0,
+    Color? color,
+    TextAlign? textAlign,
+    FontStyle? fontStyle,
+    TextOverflow? textOverflow,
+  }) {
+    return Text(
+      translate ? this : this,
+      textAlign: textAlign,
+      style: TextStyle(
+
+          fontWeight: fontWeight,
+          height: textHeight,
+          fontSize: fontSize.sp,
+          fontStyle: fontStyle,
+          color: color ?? Colors.black,
+          overflow: textOverflow ?? TextOverflow.visible),
+    );
+  }
+
+
   String toCapitalized() =>
       length > 0 ? '${this[0].toUpperCase()}${substring(1).toLowerCase()}' : '';
 
