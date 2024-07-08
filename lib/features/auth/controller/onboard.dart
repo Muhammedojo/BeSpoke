@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:be_spoke/features/home/controller/home.dart';
+import 'package:flutter/cupertino.dart';
 import '../../../core/data/model/model.dart';
 import '../../../core/utils/packages.dart';
 import '../view/onboard.dart';
@@ -48,12 +49,12 @@ class OnBoardController extends State<OnBoard> {
         description:
         'Select what ingredient goes into your meal while you cook',
         title: 'Personalize your meal plan',
-        url: 'onboard2'),
+        url: 'chef'),
     Onboard(
         description:
         'Your favorite chef is just a click away.',
         title: 'Choose your preferred chef',
-        url: 'onboard3')
+        url: 'chef')
   ];
 
 
@@ -76,7 +77,7 @@ class OnBoardController extends State<OnBoard> {
   void goToRegister() {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => const Home()),
+      CupertinoPageRoute(builder: (context) => const Home()),
     );
   }
 
@@ -84,7 +85,7 @@ class OnBoardController extends State<OnBoard> {
   void goToLogin() {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => const Home()),
+      CupertinoPageRoute(builder: (context) => const Home()),
     );
   }
 }

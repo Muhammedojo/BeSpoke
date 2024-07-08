@@ -15,7 +15,7 @@ class OnboardWidget extends StatelessWidget {
     return SizedBox(
       child: Column(
         children: [
-          '${data.url}'.pngPicture(),
+          '${data.url}'.pngPicture(height: 200),
           SizedBox(
             height: 48.h,
           ),

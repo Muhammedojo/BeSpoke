@@ -19,7 +19,7 @@ class OnBoardView
       width: state.value == index ? 20 : 12,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        color: state.value == index ? Colors.red : Colors.blue,
+        color: state.value == index ? Colors.black : Colors.black12,
       ),
     );
   }
@@ -27,7 +27,7 @@ class OnBoardView
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 24.sp),
       decoration:  BoxDecoration(
-        color: Colors.orangeAccent.withOpacity(1.0)
+        color: Colors.white.withOpacity(1.0)
           // image: DecorationImage(
           //     image: AssetImage('assets/images/bg.png'), fit: BoxFit.fill)
       ),
@@ -61,21 +61,15 @@ class OnBoardView
             height: 35.sp,
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children:
-            List.generate(3, (index) => dotContainer(index, context)),
-          ),
-          SizedBox(
-            height: 75.h,
-          ),
-          Container(
-            height: 56.h,
-            width: double.infinity,
-            decoration: BoxDecoration(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children:
+              List.generate(3, (index) => dotContainer(index, context)),
 
-              borderRadius: BorderRadius.circular(8.r),
             ),
-            child: ElevatedButton(
+            ElevatedButton(
               onPressed: () {
                 state.goToRegister();
               },
@@ -85,15 +79,19 @@ class OnBoardView
                   fontWeight: FontWeight.w500,
                   textHeight: 21.12 / 16.0),
             ),
-          ),
+
+          ],),
+
           SizedBox(
-            height: 16.h,
+            height: 75.h,
           ),
+
+
           Container(
             height: 56.h,
             width: double.infinity,
             decoration: BoxDecoration(
-              border: Border.all(color: Colors.white),
+
               borderRadius: BorderRadius.circular(8.r),
             ),
             child: ElevatedButton(
@@ -108,7 +106,7 @@ class OnBoardView
             ),
           ),
           SizedBox(
-            height: 22.h,
+            height: 42.h,
           ),
         ],
       ),
