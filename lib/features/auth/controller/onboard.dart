@@ -1,9 +1,8 @@
 import 'dart:async';
-import 'package:be_spoke/features/home/controller/home.dart';
 import 'package:flutter/cupertino.dart';
 import '../../../core/data/model/model.dart';
-import '../../../core/utils/packages.dart';
 import '../view/onboard.dart';
+import 'login.dart';
 
 class OnBoard extends StatefulWidget {
   const OnBoard({Key? key}) : super(key: key);
@@ -14,14 +13,14 @@ class OnBoard extends StatefulWidget {
 
 class OnBoardController extends State<OnBoard> {
   //... //Initialization code, state vars etc, all go here
-  late PageController pageController ;
+  late PageController pageController;
   late Timer _timer;
   int value = 0;
 
   @override
   void initState() {
     pageController = PageController();
-    _timer = Timer.periodic(const Duration(seconds: 2), (_) {
+    _timer = Timer.periodic(const Duration(seconds: 4), (_) {
       // Check if the pageController has been initialized
       if (pageController.hasClients) {
         // Get the current page index
@@ -37,26 +36,23 @@ class OnBoardController extends State<OnBoard> {
       }
     });
     super.initState();
-
   }
+
   List<Onboard> details = [
     Onboard(
-        description:
-        'With just a click, you can create how your meal plan',
+        description: 'With just a click, you can create how your meal plan',
         title: 'Create your own bespoke menu whenever you want',
-        url: 'chef'),
+        url: 'kit'),
     Onboard(
         description:
-        'Select what ingredient goes into your meal while you cook',
+            'Select what ingredient goes into your meal while you cook',
         title: 'Personalize your meal plan',
-        url: 'chef'),
+        url: 'kit4'),
     Onboard(
-        description:
-        'Your favorite chef is just a click away.',
+        description: 'Your favorite chef is just a click away.',
         title: 'Choose your preferred chef',
-        url: 'chef')
+        url: 'kit2')
   ];
-
 
   @override
   void dispose() {
@@ -77,7 +73,7 @@ class OnBoardController extends State<OnBoard> {
   void goToRegister() {
     Navigator.push(
       context,
-      CupertinoPageRoute(builder: (context) => const Home()),
+      CupertinoPageRoute(builder: (context) => const Login()),
     );
   }
 
@@ -85,7 +81,7 @@ class OnBoardController extends State<OnBoard> {
   void goToLogin() {
     Navigator.push(
       context,
-      CupertinoPageRoute(builder: (context) => const Home()),
+      CupertinoPageRoute(builder: (context) => const Login()),
     );
   }
 }

@@ -11,6 +11,7 @@ class Home extends StatefulWidget {
 
 class HomeController extends State<Home> {
   //... //Initialization code, state vars etc, all go here
+  int selectedIndex = 0;
 
   @override
   void initState() {
@@ -27,4 +28,9 @@ class HomeController extends State<Home> {
   Widget build(BuildContext context) => HomeView(this);
 
 //Control logic grouped together, at top of file
+  void onItemTapped(int index) {
+    setState(() {
+      selectedIndex = index;
+    });
+  }
 }
