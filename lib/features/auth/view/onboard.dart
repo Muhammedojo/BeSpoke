@@ -17,12 +17,12 @@ class OnBoardView extends StatelessView<OnBoard, OnBoardController> {
 
   Widget dotContainer(index, context) {
     return Container(
-      height: 10,
-      margin:REdgeInsets.symmetric(horizontal: 2),
-      width: state.value == index ? 20 : 12,
+      height: 8,
+      margin:REdgeInsets.symmetric(horizontal: 5),
+      width: state.value == index ? 8 : 8,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
-        color: state.value == index ? Colors.black : Colors.black12,
+        color: state.value == index ? Colors.red : Colors.black12,
       ),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:be_spoke/core/utils/extensions.dart';
+import 'package:be_spoke/features/home/controller/dashboard.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../../../core/data/model/model.dart';
@@ -37,7 +38,7 @@ class OnboardWidget extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  CupertinoPageRoute(builder: (context) => const Home()),
+                  CupertinoPageRoute(builder: (context) => const Dash()),
                 );
               },
               child: Container(

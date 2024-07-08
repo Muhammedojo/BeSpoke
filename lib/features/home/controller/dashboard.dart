@@ -3,20 +3,21 @@ import 'package:be_spoke/features/auth/controller/splash.dart';
 
 import '../../../core/utils/packages.dart';
 import '../../auth/controller/login.dart';
-import '../view/home.dart';
+import '../view/dashboard.dart';
+import 'home.dart';
 
-class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+class Dash extends StatefulWidget {
+  const Dash({Key? key}) : super(key: key);
 
   @override
-  HomeController createState() => HomeController();
+  DashController createState() => DashController();
 }
 
-class HomeController extends State<Home> {
+class DashController extends State<Dash> {
   //... //Initialization code, state vars etc, all go here
   int selectedIndex = 0;
   static const List<Widget> widgetOptions = <Widget>[
-    SplashScreen(),
+    Home(),
     Login(),
     SplashScreen(),
     Login(),
@@ -34,7 +35,7 @@ class HomeController extends State<Home> {
   }
 
   @override
-  Widget build(BuildContext context) => HomeView(this);
+  Widget build(BuildContext context) => DashView(this);
 
 //Control logic grouped together, at top of file
   void onItemTapped(int index) {

@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:be_spoke/features/home/controller/dashboard.dart';
 import 'package:flutter/cupertino.dart';
 import '../../../core/data/model/model.dart';
 import '../view/onboard.dart';
@@ -40,17 +41,17 @@ class OnBoardController extends State<OnBoard> {
 
   List<Onboard> details = [
     Onboard(
-        description: 'With just a click, you can create how your meal plan',
-        title: 'Create your own bespoke menu whenever you want',
+        description: 'With just a click, you can create how your meal plan.',
+        title: 'Create your own bespoke menu whenever you want.',
         url: 'kit'),
     Onboard(
         description:
-            'Select what ingredient goes into your meal while you cook',
-        title: 'Personalize your meal plan',
+            'Select what ingredient goes into your meal while you cook.',
+        title: 'Personalize your meal plan.',
         url: 'kit4'),
     Onboard(
         description: 'Your favorite chef is just a click away.',
-        title: 'Choose your preferred chef',
+        title: 'Choose your preferred chef to join you in making your meal.',
         url: 'kit2')
   ];
 
@@ -73,7 +74,7 @@ class OnBoardController extends State<OnBoard> {
   void goToRegister() {
     Navigator.push(
       context,
-      CupertinoPageRoute(builder: (context) => const Login()),
+      CupertinoPageRoute(builder: (context) => const Dash()),
     );
   }
 
@@ -81,7 +82,7 @@ class OnBoardController extends State<OnBoard> {
   void goToLogin() {
     Navigator.push(
       context,
-      CupertinoPageRoute(builder: (context) => const Login()),
+      CupertinoPageRoute(builder: (context) => const Dash()),
     );
   }
 }

@@ -8,22 +8,11 @@ class HomeView extends StatelessView<Home, HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        bottomNavigationBar: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
-            BottomNavigationBarItem(icon: Icon(Icons.favorite), label: ''),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.restaurant_rounded), label: ''),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: ''),
-          ],
-          currentIndex: state.selectedIndex,
-          selectedItemColor: Colors.red,
-          onTap: state.onItemTapped,
-        ),
+
        
         backgroundColor: AppColors.backgroundWhite,
-        body: _body());
+        body:_body()
+    );
   }
 
   Widget _body() {
