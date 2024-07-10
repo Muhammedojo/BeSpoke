@@ -28,7 +28,7 @@ The first screen upon lunching the app is ths Splash Screen.
 You then navigate to either dashboard or login screen.
 
 At the point of login, after the credentials has been provided and validated,
-I send a POST request to the server using Dio, I would have created a response file,
+I send a POST request to the server using Dio, I would have created a response class,
 Which I will then you to display on the UI if request is successful or not
 If it's successful I route to the dashboard
 
@@ -44,7 +44,7 @@ And for Success state that has empty list I show my empty state with empty list 
 
 
 --- PROJECT SETUP PROCESS --- 
-Visit my Github account and copy the peoject repo link
+Visit my Github account and copy the project repo link
 
 Paste in your terminal
 
