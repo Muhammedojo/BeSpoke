@@ -18,7 +18,7 @@ class OnBoardView extends StatelessView<OnBoard, OnBoardController> {
   Widget dotContainer(index, context) {
     return Container(
       height: 8,
-      margin:REdgeInsets.symmetric(horizontal: 5),
+      margin: REdgeInsets.symmetric(horizontal: 5),
       width: state.value == index ? 8 : 8,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
@@ -54,52 +54,32 @@ class OnBoardView extends StatelessView<OnBoard, OnBoardController> {
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: List.generate(3, (index) => dotContainer(index, context)),
+                children:
+                    List.generate(3, (index) => dotContainer(index, context)),
               ),
               InkWell(
                 onTap: () => state.goToRegister(),
                 child: Container(
-
-
                   decoration: BoxDecoration(
                     color: Colors.red,
                     borderRadius: BorderRadius.circular(8.r),
                   ),
                   child: Padding(
-                    padding:REdgeInsets.symmetric(horizontal: 18.0,vertical: 15),
+                    padding:
+                        REdgeInsets.symmetric(horizontal: 18.0, vertical: 15),
                     child: 'Next'.toText(
-                        color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                        textHeight: 21.12 / 16.0),
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                 ),
-              ),
+              )
             ],
           ),
           SizedBox(
             height: 25.h,
           ),
-
-
-          // InkWell(
-          //   onTap: () => state.goToLogin(),
-          //   child: Container(
-          //     height: 56.h,
-          //     width: double.infinity,
-          //     decoration: BoxDecoration(
-          //       color: Colors.red,
-          //       borderRadius: BorderRadius.circular(8.r),
-          //     ),
-          //     child: Center(
-          //       child: 'login'.toText(
-          //           color: Colors.white,
-          //           fontSize: 16,
-          //           fontWeight: FontWeight.w500,
-          //           textHeight: 21.12 / 16.0),
-          //     ),
-          //   ),
-          // ),
           SizedBox(
             height: 42.h,
           ),

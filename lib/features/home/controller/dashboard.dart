@@ -1,8 +1,5 @@
-
-import 'package:be_spoke/features/auth/controller/splash.dart';
-
+import 'package:be_spoke/features/favourite/controller/favourite.dart';
 import '../../../core/utils/packages.dart';
-import '../../auth/controller/login.dart';
 import '../view/dashboard.dart';
 import 'home.dart';
 
@@ -18,15 +15,14 @@ class DashController extends State<Dash> {
   int selectedIndex = 0;
   static const List<Widget> widgetOptions = <Widget>[
     Home(),
-    Login(),
-    SplashScreen(),
-    Login(),
+    Favourite(),
+    Home(),
+    Favourite(),
   ];
 
   @override
   void initState() {
     super.initState();
-
   }
 
   @override

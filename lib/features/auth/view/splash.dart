@@ -13,6 +13,8 @@ class SplashScreenView
   }
 
   Widget _body() {
-    return Center(child: 'chef'.pngPicture(height: 200,width: 200),);
+    return Center(
+      child: 'chef'.pngPicture(height: 200, width: 200),
+    );
   }
 }

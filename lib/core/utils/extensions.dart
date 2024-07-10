@@ -5,7 +5,6 @@ extension StringExtension on String {
     bool translate = true,
     FontWeight fontWeight = FontWeight.w400,
     double fontSize = 14,
-    double textHeight = 27.45 / 14.0,
     Color? color,
     TextAlign? textAlign,
     FontStyle? fontStyle,
@@ -15,16 +14,14 @@ extension StringExtension on String {
       translate ? this : this,
       textAlign: textAlign,
       style: TextStyle(
-
           fontWeight: fontWeight,
-          height: textHeight,
           fontSize: fontSize.sp,
+          fontFamily: 'Switzer',
           fontStyle: fontStyle,
           color: color ?? Colors.black,
           overflow: textOverflow ?? TextOverflow.visible),
     );
   }
-
 
   String toCapitalized() =>
       length > 0 ? '${this[0].toUpperCase()}${substring(1).toLowerCase()}' : '';

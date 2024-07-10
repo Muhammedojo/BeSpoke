@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'package:be_spoke/features/home/controller/dashboard.dart';
 import 'package:flutter/cupertino.dart';
 import '../../../core/data/model/model.dart';
 import '../view/onboard.dart';
@@ -15,13 +14,13 @@ class OnBoard extends StatefulWidget {
 class OnBoardController extends State<OnBoard> {
   //... //Initialization code, state vars etc, all go here
   late PageController pageController;
-  late Timer _timer;
+  late Timer timer;
   int value = 0;
 
   @override
   void initState() {
     pageController = PageController();
-    _timer = Timer.periodic(const Duration(seconds: 4), (_) {
+    timer = Timer.periodic(const Duration(seconds: 4), (_) {
       // Check if the pageController has been initialized
       if (pageController.hasClients) {
         // Get the current page index
@@ -63,26 +62,23 @@ class OnBoardController extends State<OnBoard> {
   @override
   Widget build(BuildContext context) => OnBoardView(this);
 
-  @override
   onPageChange(int currentIndex) {
     setState(() {
       value = currentIndex;
     });
   }
 
-  @override
   void goToRegister() {
-    Navigator.push(
+    Navigator.pushReplacement(
       context,
-      CupertinoPageRoute(builder: (context) => const Dash()),
+      CupertinoPageRoute(builder: (context) => const Login()),
     );
   }
 
-  @override
   void goToLogin() {
-    Navigator.push(
+    Navigator.pushReplacement(
       context,
-      CupertinoPageRoute(builder: (context) => const Dash()),
+      CupertinoPageRoute(builder: (context) => const Login()),
     );
   }
 }

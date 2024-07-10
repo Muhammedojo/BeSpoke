@@ -3,16 +3,16 @@ import 'package:be_spoke/features/auth/controller/splash.dart';
 
 import '../../../core/utils/packages.dart';
 import '../../auth/controller/login.dart';
-import '../view/home.dart';
+import '../view/favourite.dart';
 
-class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+class Favourite extends StatefulWidget {
+  const Favourite({Key? key}) : super(key: key);
 
   @override
-  HomeController createState() => HomeController();
+  FavouriteController createState() => FavouriteController();
 }
 
-class HomeController extends State<Home> {
+class FavouriteController extends State<Favourite> {
   //... //Initialization code, state vars etc, all go here
   int selectedIndex = 0;
   static const List<Widget> widgetOptions = <Widget>[
@@ -33,7 +33,7 @@ class HomeController extends State<Home> {
   }
 
   @override
-  Widget build(BuildContext context) => HomeView(this);
+  Widget build(BuildContext context) => FavouriteView(this);
 
 //Control logic grouped together, at top of file
   List<Category> details = [

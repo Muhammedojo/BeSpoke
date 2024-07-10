@@ -1,4 +1,3 @@
-
 import '../../../core/utils/packages.dart';
 import '../view/login.dart';
 
@@ -11,11 +10,13 @@ class Login extends StatefulWidget {
 
 class LoginController extends State<Login> {
   //... //Initialization code, state vars etc, all go here
+  final formKey = GlobalKey();
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
 
   @override
   void initState() {
     super.initState();
-
   }
 
   @override

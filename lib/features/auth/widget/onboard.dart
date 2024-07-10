@@ -54,7 +54,7 @@ class OnboardWidget extends StatelessWidget {
                       color: Colors.red,
                       fontSize: 16,
                       fontWeight: FontWeight.w500,
-                      textHeight: 21.12 / 16.0),
+                     ),
                 ),
               ),
             ),
